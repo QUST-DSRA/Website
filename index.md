@@ -10,8 +10,8 @@
 
 
 
-| Home  | Archives | About | Download |  Ask  |
-| :---: | :------: | :---: | :------: | :---: |
+| Home | Archives | [About](About/About.html) | Download | Ask  |
+| :--: | :------: | :---: | :------: | :--: |
 
 
 
@@ -21,9 +21,9 @@
 
 ---
 
-<font color='blue'>Theme</font> : [Typora Cement](https://theme.typora.io/theme/Cement/)
-
 <font color='blue'>GitHub</font> : [QUST-DSRA](https://github.com/QUST-DSRA)
+
+<font color='blue'>Theme</font> : [Typora Cement](https://theme.typora.io/theme/Cement/)
 
 <font color='blue'>Last edited</font> : 2022/11/21
 
