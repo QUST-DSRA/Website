@@ -6,6 +6,7 @@
 <style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
@@ -86,12 +87,14 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -168,7 +171,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 @media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
 .outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
@@ -234,7 +237,7 @@ mjx-container { break-inside: avoid; }
     font-family: 'Source Sans Pro';
     font-style: normal;
     font-weight: 600;
-    src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url('file:///C://Users//Tian//AppData//Roaming//Typora/themes/vue/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2') format('woff2');
+    src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url('file:///C://Users//tianjianxiang//AppData//Roaming//Typora/themes/vue/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2') format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }@import '';
 
@@ -724,9 +727,157 @@ footer {
 
 
 
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG2"] path[data-c], mjx-container[jax="SVG2"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						}
 </style><title>Download</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='书籍'><span>书籍</span></h1><blockquote><p><span>为中华之崛起而读书。 -周恩来</span></p></blockquote><p>&nbsp;</p><h2 id='深度学习'><span>深度学习</span></h2><figure><table><thead><tr><th style='text-align:center;' ><span>书籍名称</span></th><th style='text-align:center;' ><span>封面</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><a href='https://www.deeplearningbook.org/front_matter.pdf'><span>Deep Learning</span></a></td><td style='text-align:center;' ><img src="pic/1.jpeg"  style="zoom: 23%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://github.com/exacity/deeplearningbook-chinese/releases/download/v0.5-beta/dlbook_cn_v0.5-beta.pdf'><span>深度学习</span></a></td><td style='text-align:center;' ><img src="pic/4.png"  style="zoom: 25%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://d2l.ai/d2l-en.pdf'><span>Dive into Deep Learning</span></a></td><td style='text-align:center;' ><img src="pic/3.png"  style="zoom:25%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://zh-v2.d2l.ai/d2l-zh-pytorch.pdf'><span>动手学深度学习</span></a></td><td style='text-align:center;' ><img src="pic/2.png"  style="zoom: 25%;" /></td></tr></tbody></table></figure><hr /><p><code>Theme</code><span> : </span><a href='https://theme.typora.io/theme/Vue/'><span>Vue</span></a></p><p><code>Last edited</code><span> : 2022/11/21</span></p></div></div>
+<div id='write'  class=''><h1 id='下载'><span>下载</span></h1><h2 id='书籍'><span>书籍</span></h2><blockquote><p><span>为中华之崛起而读书！——周恩来</span></p></blockquote><h3 id='python'><span>Python</span></h3><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>书籍名称</span></th><th style='text-align:center;' ><span>封面</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><a href='https://mailsqusteducn-my.sharepoint.com/:b:/g/personal/2129740121_mails_qust_edu_cn/EeGB007peNVPvWaMZSe_BqIBIPfNNZ1amL0L-BqIGbQ7AA?e=tWXdDm'><span>Python编程：从入门到实践（第二版）</span></a></td><td style='text-align:center;' ><img src="./pic/Python.jpg" alt="Python" style="zoom:40%;" /></td></tr></tbody></table></figure><h3 id='数据分析'><span>数据分析</span></h3><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>书籍名称</span></th><th style='text-align:center;' ><span>封面</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><a href='https://www.numpy.org.cn/'><span>Numpy中文文档</span></a></td><td style='text-align:center;' ><img src="./pic/numpylogo.png" alt="numpylogo" style="zoom:50%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://www.pypandas.cn/'><span>Pandas中文文档</span></a></td><td style='text-align:center;' ><img src="./pic/pandaslogo.png" alt="pandaslogo" style="zoom:50%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://www.matplotlib.org.cn/'><span>Matplotlib中文文档</span></a></td><td style='text-align:center;' ><img src="./pic/matplotliblogo.png" alt="matplotliblogo" style="zoom:50%;" /></td></tr><tr><td style='text-align:center;' ><a href='#'><span>Pandas数据处理与分析</span></a><span>（</span><a href='http://joyfulpandas.datawhale.club/Content/index.html'><span>网页版</span></a><span>）</span></td><td style='text-align:center;' ><img src="./pic/pandas.jpg" alt="pandas" style="zoom:10%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://pyda.apachecn.org/#/'><span>利用 Python 进行数据分析（第 2 版）</span></a></td><td style='text-align:center;' ><img src="./pic/cover.jpg" alt="cover" style="zoom:25%;" /></td></tr></tbody></table></figure><p>&nbsp;</p><h3 id='机器学习'><span>机器学习</span></h3><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>书籍名称</span></th><th style='text-align:center;' ><span>封面</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><a href='#'><span>机器学习（西瓜书）</span></a></td><td style='text-align:center;' ><img src="./pic/xigua.jpg" alt="xigua" style="zoom:21%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://github.com/datawhalechina/pumpkin-book/releases/download/v1.9.9/pumpkin_book.pdf'><span>南瓜书</span></a><span>（</span><a href='https://datawhalechina.github.io/pumpkin-book/#/'><span>网页版</span></a><span>）</span></td><td style='text-align:center;' ><img src="./pic/pumpkin.png" alt="pumpkin" style="zoom:15%;" /></td></tr></tbody></table></figure><p>&nbsp;</p><h3 id='深度学习'><span>深度学习</span></h3><figure class='table-figure'><table><thead><tr><th style='text-align:center;' ><span>书籍名称</span></th><th style='text-align:center;' ><span>封面</span></th></tr></thead><tbody><tr><td style='text-align:center;' ><a href='https://www.deeplearningbook.org/front_matter.pdf'><span>Deep Learning</span></a></td><td style='text-align:center;' ><img src="pic/1.jpeg"  style="zoom: 23%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://github.com/exacity/deeplearningbook-chinese/releases/download/v0.5-beta/dlbook_cn_v0.5-beta.pdf'><span>深度学习</span></a></td><td style='text-align:center;' ><img src="pic/4.png"  style="zoom: 25%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://d2l.ai/d2l-en.pdf'><span>Dive into Deep Learning</span></a></td><td style='text-align:center;' ><img src="pic/3.png"  style="zoom:25%;" /></td></tr><tr><td style='text-align:center;' ><a href='https://zh-v2.d2l.ai/d2l-zh-pytorch.pdf'><span>动手学深度学习</span></a><span>（</span><a href='https://zh.d2l.ai/index.html'><span>网页版</span></a><span>）</span></td><td style='text-align:center;' ><img src="pic/2.png"  style="zoom: 25%;" /></td></tr></tbody></table></figure><h2 id='工具'><span>工具</span></h2><blockquote><p><span>君子生非异也，善假于物也  ——荀子</span></p></blockquote><ul><li><p><span>Miniconda</span></p><ul><li><p><a href='https://repo.anaconda.com/miniconda/Miniconda3-py38_23.3.1-0-Windows-x86_64.exe'><span>Miniconda3 for Windows x64 Python 3.8</span></a></p></li><li><p><a href='https://repo.anaconda.com/miniconda/Miniconda3-py38_23.3.1-0-Linux-x86_64.sh'><span>Miniconda3 for Linux x64 Python 3.8</span></a></p></li><li><p><a href='https://repo.anaconda.com/miniconda/Miniconda3-py38_23.3.1-0-MacOSX-x86_64.sh'><span>Miniconda3 for Macos Intel bash</span></a></p></li><li><p><a href='https://repo.anaconda.com/miniconda/Miniconda3-py38_23.3.1-0-MacOSX-arm64.sh'><span>Miniconda3 for Macos M1 bash</span></a></p></li></ul></li><li><p><span>Vscode</span></p><ul><li><p><a href='https://code.visualstudio.com/sha/download?build=stable&amp;os=win32-x64-user'><span>Vscode Latest for Windows</span></a></p></li><li><p><a href='https://code.visualstudio.com/sha/download?build=stable&amp;os=linux-deb-x64'><span>Vscode Latest deb for Lunux</span></a></p></li><li><p><a href='https://code.visualstudio.com/sha/download?build=stable&amp;os=linux-rpm-x64'><span>Vscode Latest rpm for Linux</span></a></p></li><li><p><a href='https://code.visualstudio.com/sha/download?build=stable&amp;os=darwin-universal'><span>Vscode Latest for Macos</span></a></p></li></ul></li><li><p><span>Pycharm</span></p><ul><li><p><a href='https://www.jetbrains.com/zh-cn/pycharm/download/download-thanks.html?platform=windows'><span>PyCharm Professional Latest for windows</span></a></p></li><li><p><a href='https://www.jetbrains.com/zh-cn/pycharm/download/download-thanks.html?platform=windows&amp;code=PCC'><span>PyCharm Community Latest for windows</span></a></p></li><li><p><a href='https://www.jetbrains.com/zh-cn/pycharm/download/download-thanks.html?platform=linux'><span>PyCharm Professional Latest for Linux</span></a></p></li><li><p><a href='https://www.jetbrains.com/zh-cn/pycharm/download/download-thanks.html?platform=linux&amp;code=PCC'><span>PyCharm Community Latest for Linux</span></a></p></li><li><p><a href='https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=mac'><span>PyCharm Professional Latest for Macos Intel</span></a></p></li><li><p><a href='https://www.jetbrains.com/zh-cn/pycharm/download/download-thanks.html?platform=mac&amp;code=PCC'><span>PyCharm Community Latest for Macos intel</span></a></p></li><li><p><a href='https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=macM1'><span>PyCharm Professional Latest for Macos M1</span></a></p></li><li><p><a href='https://www.jetbrains.com/zh-cn/pycharm/download/download-thanks.html?platform=macM1&amp;code=PCC'><span>PyCharm Community Lates for Macos M1</span></a></p></li></ul></li></ul><p><code>Theme</code><span> : </span><a href='https://theme.typora.io/theme/Vue/'><span>Vue</span></a></p><p><code>Last edited</code><span> : 2023/7/10</span></p></div></div>
 </body>
 </html>
